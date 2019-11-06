@@ -1,0 +1,242 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>m_index</title>
+	<meta name="viewport" content="width=device-width , initialscale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/m_ts.css">
+	<script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+    $(function(){
+			var visual = $("#brandVisual > ul > li");
+			var button = $("#buttonList > ul > li");
+			var current = 0;
+			var setInervalId;
+				
+			
+			
+				timer();
+			button.on({
+				click:function(){
+					var tg = $(this);
+					var i = tg.index();
+					button.removeClass('on');
+					tg.addClass('on');
+					move(i);
+				}
+			});
+				
+			function move(i){
+				if(current == i) return;
+				
+				var current1 = visual.eq(current);
+				var next1 = visual.eq(i);
+				
+				current1.css({left:0}).stop().animate({left:'-100%'});
+				next1.css({left:'100%'}).stop().animate({left:0});
+				
+				current = i;
+			}
+							  
+			
+				
+			$("#wrap").on({
+				mouseover:function(){
+					clearInterval(setIntervalId);
+				},
+				mouseout:function(){
+					timer();
+				}
+			});
+				
+			
+			function timer(){
+				setIntervalId= setInterval(function(){
+					var n = current + 1;
+					if(n == visual.length){
+						n=0;
+					}
+					button.eq(n).trigger("click");
+				},5000);
+			}
+		
+
+		});
+	</script>  
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+		 $("header").load("m_header.html");
+		});
+		
+		$(document).ready(function(){
+		 $("footer").load("m_footer.html");
+		});
+	</script>    
+</head>
+<body>
+		<div id="wrap">
+			<header>
+			</header>
+			
+			<div id="brandVisual">
+				<ul>
+					<li class="visual01"><a href="#">배너1</a></li>
+					<li class="visual02"><a href="#">배너2</a></li>
+					<li class="visual03"><a href="#">배너3</a></li>
+				</ul>
+			</div>
+			<div id="buttonList">
+				<ul>
+					<li class="on"><a href="#">버튼1</a></li>
+					<li><a href="#">버튼2</a></li>
+					<li><a href="#">버튼3</a></li>
+				</ul>
+			</div>
+			
+			<section>
+				<div id="content_1">
+					<h2>TWOSOMEPLACE`S CHOICE</h2>
+					
+					<div id="subcontent_1">
+						<div class="sub1_1">
+						<ul class="sub11">
+							<li><img src="images/msub1.png" alt="" height="114px">
+							</li>
+							<li class="sub_txt">딸기 눈꽃빙수</li>
+							<li class="sub_txt2">Strawberry Ice Flake</li>
+						</ul>
+					</div>
+					
+					<div class="sub1_2">
+						<ul class="sub12">
+							<li>
+								<img src="images/mobilebingsu.png" alt="">
+							</li>
+						<li class="sub_txt">커피 빙수</li>
+						<li class="sub_txt2">Coffee Ice Flake</li>
+						</ul>
+					</div>
+					</div>
+					
+				</div>
+				
+				<div id="content_2">
+					<h2>A little Special Break At TWOSOME PLACE</h2>
+					<h3>투썸플레이스에서의 조금 특별한 휴식</h3>
+					
+					<div id="subcontent_2">
+						<div class="sub2_1">
+						<ul class="sub21">
+							<li><img src="images/coffee_21.png" alt="">
+									<div class="aa">
+										<p>COFFEE&amp;BEVERAGE</p>
+										<p>향기로운 커피내음!</p>
+										<p>다양한 음료들의 앙상블!</p>
+										
+											<a href="#" class="more">more</a>
+										
+									</div>
+							</li>
+						</ul>
+
+					</div>
+					
+					<div class="sub2_2">
+						<ul class="sub22">
+							<li>
+								<img src="images/coffee_22.png" alt="">
+								<div class="bb">
+									<p>DELI</p>
+											<p>영양만점!</p>
+											<p>든든한 샌드위치와 샐러드</p>
+											
+												<a href="#" class="more">more</a>
+										
+								</div>
+							</li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				
+				<div id="content_3">
+				<h2>TWOSOME PLACE INSTAGRAM</h2>
+				<h3>투썸플레이스의 인스타그램을 확인해보세요!</h3>
+				
+				<div id="subcontent_3">
+					<ul>
+						<li><img src="images/insta1.png" alt=""></li>
+						<li><img src="images/insta2.png" alt=""></li>
+						<li><img src="images/insta3.png" alt=""></li>
+						<li><img src="images/insta4.png" alt=""></li>
+						<li><img src="images/insta5.png" alt=""></li>
+						<li><img src="images/insta6.png" alt=""></li>
+					</ul>
+				</div>
+								
+			</div>
+			
+				<div id="content_4">
+					<div id="subcontent_4">
+						<div class="sub4_1">
+							<ul class="sub41">
+								<li>
+								
+									<div class="aaa">
+										<p>가맹점 개설안내</p>
+										<p></p>
+										<p>성공적으로 창업을 해보세용!</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="sub4_2">
+						<ul class="sub42">
+							<li>
+								<div class="bbb">
+									<p>매장찾기</p> 
+									<p></p>
+									<input type="search" placeholder=" 매장찾기"><img src="images/qbox.png" alt="">
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="sub4_3">
+						
+							<div class="news">
+								<div class="news_container">
+									<p class="news_txt">투썸플레이스 소식</p>
+									<a href="#" id="plus">more</a>
+									<ul class="sub43">
+										<li><p class="a">T멤버십 SKT 5GX 홀케이크 50 고객 특별 이벤트 진행 매장 안내</p><div class="date">2019.09.06</div></li>
+										<li><p class="a">투썸 홈페이지 케이크 예약하기 서비스 종료 안내</p> <div class="date">2019.09.05</div></li>
+										<li><p class="a">CJ카드 전산 작업으로 인한 서비스 일시 중단의 건 17:00~18:00</p> <div class="date">2019.09.03</div></li>
+									</ul>
+								</div>
+							</div>
+					
+						<div class="sub43_img">
+							<img src="images/space.png" alt="">
+						</div>
+					</div>
+					
+					</div>
+					
+				
+				</div>
+				
+				
+			</section>
+			
+		<footer>
+			
+		</footer>
+		</div>
+</body>
+</html>

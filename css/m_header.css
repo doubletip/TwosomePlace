@@ -1,0 +1,23 @@
+header{width: 100%; margin: 0 auto; position: relative;}
+
+/*header*/
+header > #top_util{position: relative; width: 100%; margin: 0 auto;}
+header > #top_util > h1{text-align: left; _margin-left: 5%; margin-top: 5px;}
+header > #top_util > .m_menu{position: absolute; right: 3%; top: 20px;}
+
+/*info*/
+#info{display: none; position: absolute; width: 80%; right: 0; z-index: 10; background-color: white; top: 15px;}
+#info .info_h{position: relative; height: 55px;}
+#info .info_h .x{position: absolute; right: 5%; background:#b78338; width: 30px; height: 30px; text-align: center; padding-top: 7px; color: white;}
+#info .info_h .join{margin-top: 5px; display: inline-block; margin-left: 40px;}
+		
+#info .info_b{width: 100%; position: relative; background-color: #b78338;}
+#info .info_b ul{position: relative; }
+#info .info_b ul li{border-bottom:1px solid #7e5a27; padding-top:20px; _padding-left:10px; color:white; font-weight: bold;}
+#info .info_b ul li a{padding-left: 10px; display: block; padding-bottom: 10px;}
+#info .info_b ul li > img{position: absolute; right: 1%;}
+
+
+.sub_menu{width: 100%; background: #e1a247; font-weight: normal !important;}
+.sub_menu li{font-size: 14px;}
+.sub_menu li a:hover{color:#915c4c;}

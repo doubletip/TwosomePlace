@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+footer{position: relative; width: 100%; margin: 0 auto; text-align: center; background:#2f1812; height: 300px; color: #905b4b;}
+footer h1{padding-top: 50px;}
+footer address{padding-top: 30px;}
+
+footer .top_Btn{position: absolute; border-radius: 50px 50px 0 0; height: 40px; width: 80px; background: #2f1812; left: 48%; top: -30px; padding-top: 10px; cursor: pointer;}

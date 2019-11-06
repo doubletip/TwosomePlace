@@ -1,0 +1,6 @@
+/*footer*/
+footer{position: relative; width: 100%; margin: 0 auto; text-align: center; background:#2f1812; height: 190px; color: #905b4b; margin-top: 5%;}
+footer h1{padding-top: 25px;}
+footer address{padding-top: 10px; font-size:6px; font-weight:strong;}
+
+footer .top_Btn{position: absolute; border-radius: 50px 50px 0 0; height: 20px; width: 50px; background: #2f1812; left: 45%; top: -20px; padding-top: 10px; cursor: pointer; font-size: 12px;}
