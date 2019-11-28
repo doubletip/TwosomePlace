@@ -163,6 +163,7 @@ section{position: relative; width: 100%;}
 .sub43{}
 
 .sub43_img{width: 100%; margin-top: 30px;}
+.sub43_img img {width: 200%;}
 
 input[type="search"]{position: relative; width: 70%; margin: 0 auto; height: 40px; border: 3px solid white; background:#594641;}
 .bbb img{position: relative; right: 30px; top: 3px; width: 15px; height: 15px;}
